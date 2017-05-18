@@ -19,4 +19,6 @@ for i in $(seq 1 100); do cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold | head -n
 ```
 
 Hosts100 file creation
-```for i in $(seq 1 100); do echo "host$i ansible_host=127.0.0.$i"; done > hosts100```
+```
+for i in $(seq 1 100); do echo "host$i ansible_host=127.0.0.$i"; done > hosts100
+```
