@@ -1,0 +1,10 @@
+host1 ansible_host=127.0.0.1
+host2 ansible_host=127.0.0.2
+host3 ansible_host=127.0.0.3
+host4 ansible_host=127.0.0.4
+host5 ansible_host=127.0.0.5
+host6 ansible_host=127.0.0.6
+host7 ansible_host=127.0.0.7
+host8 ansible_host=127.0.0.8
+host9 ansible_host=127.0.0.9
+host10 ansible_host=127.0.0.10

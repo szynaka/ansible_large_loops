@@ -1,0 +1,13 @@
+# Exclude the Ansible Vault password file
+vpass
+# Exclude retry files from failed Ansible runs
+*.retry
+# Exclude compiled python
+*.pyc
+# Excluded .vagrant directory
+.vagrant/
+# Exclude vi swp files
+.*.swp
+# Exclude macOS .DS_Store files
+.DS_Store
+.ds_store
