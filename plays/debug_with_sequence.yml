@@ -1,0 +1,10 @@
+---
+- name: debug message loop
+  hosts: all
+  become: no
+  tasks:
+    - name: count
+      debug:
+        msg: "loop {{ item }}"
+      with_sequence: start=1 end=100
+      register: task_output

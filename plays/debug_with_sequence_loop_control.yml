@@ -1,0 +1,13 @@
+---
+- name: debug message loop
+  hosts: all
+  become: no
+  gather_facts: no
+  tasks:
+    - name: count
+      debug:
+        msg: "loop {{ filename }}"
+      with_sequence: start=1 end=100
+      loop_control:
+        loop_var: filename
+      register: task_output

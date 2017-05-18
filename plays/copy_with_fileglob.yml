@@ -1,0 +1,19 @@
+---
+- name: mass file placement
+  hosts: all
+  become: no
+  tasks:
+    - name: Create the tmp directory
+      file:
+        path: "/tmp/mass_file/{{ ansible_host }}"
+        state: directory
+
+    - name: Install files
+      copy:
+        src: "{{ filename }}"
+        dest: "/tmp/mass_file/{{ ansible_host }}/{{ filename | basename | regex_replace('.j2$', '') }}" # get just the filename and strip off the .j2 suffix
+      with_fileglob: "files/*"
+      loop_control:
+        loop_var: filename
+        label: "{{ filename | basename }}" # get print the filename
+      register: install_files_task
