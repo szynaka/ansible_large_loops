@@ -12,7 +12,7 @@
       file:
         state: absent
         path: "/tmp/mass_file/{{ ansible_host }}/{{ filename | basename | regex_replace('.j2$', '') }}" # get just the filename and strip off the .j2 suffix
-      with_fileglob: "files/*"
+      with_fileglob: "../files/*"
       loop_control:
         loop_var: filename
         label: "{{ filename | basename }}" # get print the filename
